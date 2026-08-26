@@ -1,3 +1,4 @@
+import { Header } from "./components/header"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-    <p className="text-error">Hello WW</p>
+    <Header />
     </>
   )
 }
