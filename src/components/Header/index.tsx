@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <div className="relative">
             <header className="fixed top-0 left-0 right-0 z-10 mx-10 py-10">
-                <div className="bg-header max-w-[1320px] mx-auto flex justify-between items-center py-5 px-7 rounded-2xl mt-5">
+                <div className="bg-header max-w-[1320px] mx-auto flex justify-between items-center py-5 px-7 rounded-2xl mt-5">                                        
                     <img src={Logo} alt="Logo Syntaxwear" className='w-32 md:w-36' />
                     <nav className='hidden md:block'>
                         <ul className='flex gap-10' >
