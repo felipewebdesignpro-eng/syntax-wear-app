@@ -27,6 +27,13 @@
     --font-display: 'ubuntu', sans-serif;
 }
 
+@font-face {
+    font-family: 'ubuntu';
+    font-style: medium;
+    font-weight: 500;
+    font-display: swap;
+    src: url('@/assets/fonts/ubuntu-medium-500.woff2') format('woff2');
+}
 
 @font-face {
     font-family: 'ubuntu';
