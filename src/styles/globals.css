@@ -29,7 +29,7 @@
 
 @font-face {
     font-family: 'ubuntu';
-    font-style: normal;
+    font-style: medium;
     font-weight: 500;
     font-display: swap;
     src: url('@/assets/fonts/ubuntu-medium-500.woff2') format('woff2');

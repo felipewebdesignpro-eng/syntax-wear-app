@@ -1,8 +1,9 @@
-import Banner from '@/assets/images/hero.jpg'
+import Banner from '@/assets/images/hero.jpg';
+import {Button} from '../Button';
 
 export const Hero = () => {
     return (
-        <div className="container">
+        <div className="container py-5">
             <section className='h-125 rounded-[20px] mb-10'>
                 <img src={Banner} alt="Homem sentado com os tênis da Syntaxwear" className='w-full h-full object-cover rounded-[20px]' />
 
@@ -13,9 +14,8 @@ export const Hero = () => {
                         >Transforme qualquer passo em presença</h1>
 
                         <div className='flex gap-3.5' >
-                            <button>Ver Modelos</button>
-                            <button>Comprar</button>
-
+                            <Button variant="secondary" size="sm">Ver Modelos</Button>
+                            <Button>Comprar</Button>
                         </div>
                     </div>
                 </div>

@@ -4,10 +4,10 @@ import { Hero } from "./components/Hero"
 function App() {
   return (
     <>
-      <main className="py-10">
-        <Header />
-
-        <Hero />
+    <main>
+      <Header />
+      
+      <Hero />
       </main>
     </>
   )
