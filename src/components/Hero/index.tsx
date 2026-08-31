@@ -1,9 +1,9 @@
 import Banner from '@/assets/images/hero.jpg';
-import {Button} from '../Button';
+import { Button } from '../Button';
 
 export const Hero = () => {
     return (
-        <div className="container py-5">
+        <div className="container">
             <section className='h-125 rounded-[20px] mb-10'>
                 <img src={Banner} alt="Homem sentado com os tênis da Syntaxwear" className='w-full h-full object-cover rounded-[20px]' />
 
