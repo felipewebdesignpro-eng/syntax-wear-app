@@ -1,0 +1,72 @@
+/*
+  Base mobile-first: a galeria começa em uma coluna simples e com a ordem
+  visual prescrita pela interface. Cada item recebe uma área do grid para
+  controlar sua posição sem precisar de inline styles.
+*/
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "highlight highlight"
+        "sneaker-white sneaker-white"
+        "model sneaker-color"
+        "model sneaker-silver"
+        "sneaker-purple sneaker-purple";
+    gap: 10px;
+}
+
+.gallery-item--highlight {
+    grid-area: highlight;
+}
+
+/* Os itens mais baixos do mobile recebem altura fixa para manter a composição
+   visual mais próxima do mockup. */
+.gallery-item--sneaker-white,
+.gallery-item--sneaker-purple {
+    height: 190px;
+    min-height: 190px;
+}
+
+.gallery-item--sneaker-purple {
+    grid-area: sneaker-purple;
+}
+
+.gallery-item--model {
+    grid-area: model;
+}
+
+.gallery-item--sneaker-color {
+    grid-area: sneaker-color;
+}
+
+.gallery-item--sneaker-white {
+    grid-area: sneaker-white;
+}
+
+.gallery-item--sneaker-silver {
+    grid-area: sneaker-silver;
+}
+
+/*
+  Em desktop, o grid volta para a composição de 4 colunas e 3 linhas, com
+  a distribuição definida pelo layout do Figma. Aqui o foco é a posição dos
+  blocos e a altura das áreas maiores, como destaque, modelo e sapatos.
+*/
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 300px);
+        grid-template-areas:
+            "highlight highlight sneaker-purple sneaker-purple"
+            "highlight highlight model sneaker-color"
+            "sneaker-white sneaker-white model sneaker-silver";
+        gap: 30px;
+    }
+
+    .gallery-item--sneaker-white,
+    .gallery-item--sneaker-purple {
+        height: auto;
+        min-height: 300px;
+    }
+}
