@@ -23,6 +23,7 @@
     --color-error: hsl(0, 83%, 58%);
     --color-footer-bg: hsl(0, 0%, 20%);
     --color-footer-hover: hsl(0, 0%, 80%);
+    --color-border-red-500: hsl(0, 83%, 58%);
 
     --font-display: 'ubuntu', sans-serif;
 }

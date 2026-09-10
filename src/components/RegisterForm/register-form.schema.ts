@@ -20,7 +20,7 @@ const validarData = (data: string): boolean => {
 export const registerUserFormSchema = z
     .object({
         email: z
-            .email("Email inválido").nonempty("Email é obrigatório"),
+            .email("Email inválido"),
 
         password: z
             .string()
@@ -64,7 +64,7 @@ export const registerUserFormSchema = z
 
 export type RegisterFormData = z.infer<typeof registerUserFormSchema>;
 
-export function RegisterForm() {
+export const useRegisterForm = () => {
     const {
         register,
         handleSubmit,
@@ -82,6 +82,7 @@ export function RegisterForm() {
             birthDate: "",
             firstName: "",
             lastName: "",
+            cellPhone: "",
         },
 
         criteriaMode: "all",

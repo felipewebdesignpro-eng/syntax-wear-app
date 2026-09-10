@@ -1,8 +1,8 @@
 export const LoginForm = () => {
     return (
-        <form className="flex flex-col gap-4 bg-accent">
+        <form className="flex flex-col gap-3.5">
             <input className="border rounded-[1px] border-gray-200 w-full text-black p-3" type="email" placeholder="E-mail" />
-            <button className="bg-purple-200 w-full p-3.5 rounded-[1px] cursor-pointer">Continuar</button>
+            <button className="bg-[#232323] text-white w-full p-3.5 rounded-[1px] cursor-pointer">Continuar</button>
         </form>
     )
 }
