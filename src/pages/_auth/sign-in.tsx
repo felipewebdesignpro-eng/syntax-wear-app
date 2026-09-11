@@ -7,7 +7,7 @@ import { Separator } from '../../components/Separator'
 
 export const Route = createFileRoute('/_auth/sign-in')({
   component: RouteComponent,
-})
+});
 
 function RouteComponent() {
   return (
@@ -28,8 +28,8 @@ function RouteComponent() {
           </button>
 
           <p className="text-sm text-gray-600 mt-3.5 text-center">
-            Ainda não possui conta?{" "}
-            <Link to="/sign-up" className="text-[#5433eb] hover:underline">Cadastre-se </Link>
+            Ainda não possui conta?
+            <Link to="/sign-up" className="text-[#5433eb] hover:underline"> Cadastre-se </Link>
           </p>
 
         </div>
