@@ -1,9 +1,3 @@
-import { Categories } from "./components/Categories"
-import { Footer } from "./components/Footer"
-import { Gallery } from "./components/Gallery"
-import { Header } from "./components/Header"
-import { Hero } from "./components/Hero"
-
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./router-tree-gen";
 
@@ -16,7 +10,7 @@ declare module "@tanstack/react-router" {
 }
 
 function App() {
-  return <RouterProvider router={router} />
+  return <RouterProvider router={router} />;
 }
 
 export default App;

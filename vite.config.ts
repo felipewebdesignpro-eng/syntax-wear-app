@@ -13,7 +13,7 @@ export default defineConfig({
       target: 'react',
       autoCodeSplitting: true,
       routesDirectory: "./src/pages",
-      generatedRouteTree: "./src/routeTree.gen.ts",
+      generatedRouteTree: "./src/router-tree-gen.ts",
       routeToken: "layout",
     }),
     react(), tailwindcss()],
