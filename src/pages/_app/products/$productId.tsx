@@ -17,8 +17,8 @@ function RouteComponent() {
 
     const inInstallmentsPrice = originalPrice / 6
 
-    return <section className="container pt-44 md:pt-54 pb-10 mb-10 md:px-10 bg-surface">
-        <nav className='text-[#232323] text-sm mb-15'>
+    return <section className="container pt-44 md:pt-54 pb-10 mb-10 md:px-10">
+        <nav className='text-[#232323] text-sm mb-15 ml-5'>
             <Link to="/">Home</Link> / {" "}
             <Link to="/products">Produtos</Link> / {" "}
             <span className='font-semibold'>{filteredProduct?.name}</span>
@@ -45,6 +45,16 @@ function RouteComponent() {
 
                 </p>
 
+                <p className='max-w-[500px] my-5'>{filteredProduct?.description}</p>
+
+                <div className='mb-6'>
+                    <p className='text-sm mb-2'>Calcular o prazo de entrega</p>
+                    <form className='flex gap-3.5'>
+                        <input type='text' placeholder='Insira o CEP' className='border border-[#c0c0c0] rounded-md p-3' />
+                        <button className='bg-black text-white px-6 rounded-md cursos-pointer hover:bg-gray-800'>Calcular</button>
+                    </form>
+                </div>
+                <button className='bg-black text-white rounded-md p-5 w-full cursor-pointer hover:bg-gray-800'>Adicionar carrinho</button>
             </div>
         </div>
     </section>

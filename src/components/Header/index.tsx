@@ -9,15 +9,20 @@ export const Header = () => {
         <div className="relative">
             <header className="fixed top-10 left-0 right-0 z-10 mx-10 mt-5">
                 <div className="bg-white text-black max-w-[1320px] mx-auto flex justify-between items-center py-3 px-7 rounded-2xl">
-                    <img src={Logo} alt="Logo Syntaxwear" className='w-32 md:w-36' />
+                    <Link to="/">
+                        <img src={Logo} alt="Logo Syntaxwear" className='w-32 md:w-36' />
+                    </Link>
                     <nav className='hidden md:block'>
                         <ul className='flex gap-10' >
                             <li>
-                                
                                 <a href="#">Masculino</a>
-                                </li>
-                            <li><a href="#">Feminino</a></li>
-                            <li><a href="#">Outlet</a></li>
+                            </li>
+                            <li>
+                                <a href="#">Feminino</a>
+                            </li>
+                            <li>
+                                <a href="#">Outlet</a>
+                            </li>
                         </ul>
                     </nav>
 
@@ -26,11 +31,11 @@ export const Header = () => {
                             <li className='hidden md:block'><a href="#">Nossas Lojas </a></li>
                             <li className='hidden md:block'><a href="#">Sobre</a></li>
                             <li>
-                            
-                            <Link to="/sign-in"><img src={IconUser} alt="Icon User"/></Link>
+
+                                <Link to="/sign-in"><img src={IconUser} alt="Icon User" /></Link>
                             </li>
-                            <li><a href="#"> <img src={IconAbout} alt="Icon About"/> </a></li>
-                            <li><a href="#"> <img src={IconCart} alt="Icon Cart"/>  </a></li>
+                            <li><a href="#"> <img src={IconAbout} alt="Icon About" /> </a></li>
+                            <li><a href="#"> <img src={IconCart} alt="Icon Cart" />  </a></li>
                         </ul>
                     </nav>
                 </div>
