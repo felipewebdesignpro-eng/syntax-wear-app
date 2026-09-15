@@ -1,11 +1,12 @@
 import IconCart from "@/assets/images/icon-cart.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MensTreeDasher from "@/assets/images/tree-dasher-2-natural-black-boyal-blue.webp"
 import MensTreeRunnerNz from "@/assets/images/tree-runner-nz-weathered-brown.webp"
 import MensWoolCruiser from "@/assets/images/wool-cruiser-burgundy.webp"
 import MensWoolCruiserSlipOn from "@/assets/images/wool-cruiser-slip-on-dark-grey.webp"
 import MensWoolCruiserWaterproof from "@/assets/images/wool-cruiser-waterproof-natural-black.webp"
 import { formatCurrency } from "../../utils/format-Currency";
+import { CartContext } from "../../contexts/CartContext";
 
 const productsInCart = [
     { id: 1, name: 'Produto 1', image: MensTreeDasher, price: 35, quantity: 5 },
@@ -13,17 +14,12 @@ const productsInCart = [
     { id: 3, name: 'Produto 3', image: MensWoolCruiser, price: 85, quantity: 4 },
     { id: 4, name: 'Produto 4', image: MensWoolCruiserSlipOn, price: 135, quantity: 6 },
     { id: 5, name: 'Produto 5', image: MensWoolCruiserWaterproof, price: 15, quantity: 2 },
-    { id: 1, name: 'Produto 1', image: MensTreeDasher, price: 35, quantity: 5 },
-    { id: 2, name: 'Produto 2', image: MensTreeRunnerNz, price: 75, quantity: 2 },
-    { id: 3, name: 'Produto 3', image: MensWoolCruiser, price: 85, quantity: 4 },
-    { id: 4, name: 'Produto 4', image: MensWoolCruiserSlipOn, price: 135, quantity: 6 },
-    { id: 5, name: 'Produto 5', image: MensWoolCruiserWaterproof, price: 15, quantity: 2 },
-
 ]
 
 export const ShoppingCart = () => {
 
     const [cartIsOpen, setCartIsOpen] = useState<boolean>(false);
+    const { } = useContext(CartContext)
 
     return (
         <>
