@@ -13,7 +13,7 @@ export interface ProductCart extends Product {
 export const CartProvider = ({ children }: CartProviderProps) => {
     const [cart, setCart] = useState<ProductCart[]>([]);
 
-    function add(product: Product): void {
+    function addToCart(product: Product): void {
         const productExistsInCart = cart.find(
             (itemIncart) => itemIncart.id === product.id
         );
@@ -31,16 +31,46 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         setCart(newCart);
     }
 
-    function remove(productId: number): void {
+    function removeFromCart(productId: number): void {
         setCart(cart.filter((itemInCart) => itemInCart.id !== productId));
     }
 
-    return <CartContext.Provider value={{
-        cart,
-        add,
-        remove
-    }}>
-        {children}
-    </CartContext.Provider>
+    function incrementInCart(product: ProductCart): void {
+        updateProductQuantity(product, product.quantity + 1)
+    }
 
+    function decrementInCart(product: ProductCart): void {
+        updateProductQuantity(product, product.quantity - 1)
+    }
+
+    function updateProductQuantity(product: ProductCart, newQuantity: number): void {
+        if (newQuantity <= 0) return
+
+        const productExistsInCart = cart.find(
+            (itemIncart) => itemIncart.id === product.id
+        );
+
+        if (!productExistsInCart) return;
+
+        const newCart = cart.map((itemInCart) =>
+            itemInCart.id === product.id
+                ? { ...itemInCart, quantity: newQuantity }
+                : itemInCart
+        );
+
+        setCart(newCart);
+    }
+
+    return (
+        <CartContext.Provider value={{
+            cart,
+            addToCart,
+            removeFromCart,
+            incrementInCart,
+            decrementInCart
+        }}
+        >
+            {children}
+        </CartContext.Provider>
+    );
 };
