@@ -9,15 +9,26 @@ export const ShoppingCart = () => {
     const [cartIsOpen, setCartIsOpen] = useState<boolean>(false);
     const { cart, removeFromCart, incrementInCart, decrementInCart } = useContext(CartContext)
 
-    console.log("items no carrinho:", cart)
+    const totalItems = cart.reduce((total, product) => total + product.quantity, 0);
 
     return (
         <>
             <button
-                className="cursor-pointer"
+                type="button"
+                className="relative cursor-pointer"
+                aria-label={`Carrinho de compras, ${totalItems} ${totalItems === 1 ? "item" : "itens"}`}
+                aria-expanded={cartIsOpen}
                 onClick={() => setCartIsOpen(!cartIsOpen)}
             >
                 <img src={IconCart} alt="Ícone carrinho de compras" />
+                {totalItems > 0 && (
+                    <span
+                        className="absolute -top-2 -right-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-600 px-1 text-xs font-bold text-white"
+                        aria-hidden="true"
+                    >
+                        {totalItems}
+                    </span>
+                )}
             </button>
 
             {/*{Overlay} */}
@@ -31,7 +42,7 @@ export const ShoppingCart = () => {
                     className={`${cartIsOpen ? "translate-x-0" : "translate-x-full"} absolute top-0 right-0 bottom-0 bg-white pt-6 transition-all duration-500 ease-in-out w-75 md:w-106`}
                     onClick={(e) => e.stopPropagation()}>
                     <header className="flex items-center justify-between px-5">
-                        <p className="text-2xl font-bold">Carrinho ({cart.length})</p>
+                        <p className="text-2xl font-bold">Carrinho ({totalItems})</p>
                         <button className="text-xl cursor-pointer" onClick={() => setCartIsOpen(!cartIsOpen)}>x</button>
                     </header>
 
