@@ -3,6 +3,7 @@ import { products } from "../../../Mocks/products";
 import { formatCurrency } from '../../../utils/format-Currency';
 import { useContext } from 'react';
 import { CartContext } from '../../../contexts/CartContext';
+import { CEPForm } from '../../../components/CEPForm';
 
 export const Route = createFileRoute('/_app/products/$productId')({
     component: RouteComponent,
@@ -47,20 +48,15 @@ function RouteComponent() {
                 </p>
 
                 <p className='mb-2'>ou <span className='text-[#383838] font-semibold'>6x</span>{" "}<span className="text-[#38373A] font-semibold">{formatCurrency(inInstallmentsPrice)}</span>
-
                 </p>
 
                 <p className='max-w-[500px] my-5'>{filteredProduct?.description}</p>
-
                 <div className='mb-6'>
-                    <p className='text-sm mb-2'>Calcular o prazo de entrega</p>
-                    <form className='flex gap-3.5'>
-                        <input type='text' placeholder='Insira o CEP' className='border border-[#c0c0c0] rounded-md p-3' />
-                        <button className='bg-black text-white px-6 rounded-md cursos-pointer hover:bg-gray-800'>Calcular</button>
-                    </form>
+                    <p className='text-sm'>
+                        Calcular o prazo de entrega
+                    </p>
+                    <CEPForm />
                 </div>
-
-
                 <button className='bg-black text-white rounded-md p-5 w-full cursor-pointer hover:bg-gray-800' onClick={() => addToCart(filteredProduct)}>Adicionar carrinho</button>
             </div>
         </div>
