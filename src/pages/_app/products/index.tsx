@@ -4,6 +4,9 @@ import { products } from "../../../Mocks/products";
 
 export const Route = createFileRoute("/_app/products/")({
   component: RouteComponent,
+  head: () => ({
+    meta: [{ title: "Produtos | Syntaxwear" }],
+  }),
 });
 
 function RouteComponent() {
@@ -21,3 +24,11 @@ function RouteComponent() {
     </section>
   );
 }
+
+/*   {products.length === 0 ? (
+        <p className="text-center text-gray-500">
+          Nenhum produto encontrado para esta categoria.
+        </p>
+      ) : (
+        <ProductList products={products} />
+      )} */

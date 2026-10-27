@@ -4,6 +4,9 @@ import { products } from "../../../../Mocks/products";
 
 export const Route = createFileRoute("/_app/products/category/$category")({
   component: RouteComponent,
+  head: () => ({
+    meta: [{ title: "Produtos | Syntaxwear" }],
+  }),
 });
 
 function RouteComponent() {

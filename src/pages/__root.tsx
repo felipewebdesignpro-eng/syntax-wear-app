@@ -1,10 +1,13 @@
-import * as React from 'react'
-import { Outlet, createRootRoute } from '@tanstack/react-router'
+import * as React from "react";
+import { HeadContent, Outlet, createRootRoute } from "@tanstack/react-router";
 
 export const Route = createRootRoute({
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
-})
+  head: () => ({
+    meta: [{ title: "Início | Syntaxwear" }],
+  }),
+});
 
 function NotFoundComponent() {
   return (
@@ -15,13 +18,14 @@ function NotFoundComponent() {
         <p className="mt-3">O endereço acessado não existe.</p>
       </div>
     </main>
-  )
+  );
 }
 
 function RootComponent() {
   return (
     <React.Fragment>
+      <HeadContent />
       <Outlet />
     </React.Fragment>
-  )
+  );
 }
