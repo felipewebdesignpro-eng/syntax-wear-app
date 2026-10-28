@@ -8,7 +8,7 @@ export const RegisterForm = () => {
         <form className="flex flex-col gap-4 text-gray-800">
             <div>
                 <label className="text-xs text-gray-600">E-mail*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.email ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.email ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="email" {...register("email")} />
 
                 {errors.email && <p className="text-xs text-red-600 mt-1"
@@ -17,7 +17,7 @@ export const RegisterForm = () => {
 
             <div>
                 <label className="text-xs text-gray-600">Senha*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.password ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.password ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="password" {...register("password")} />
 
                 {errors.password && <p className="text-xs text-red-600 mt-1"
@@ -26,7 +26,7 @@ export const RegisterForm = () => {
 
             <div>
                 <label className="text-xs text-gray-600">Confirmar senha*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.confirmPassword ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.confirmPassword ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="password" {...register("confirmPassword")} />
 
                 {errors.confirmPassword && <p className="text-xs text-red-600 mt-1"
@@ -35,7 +35,7 @@ export const RegisterForm = () => {
 
             <div>
                 <label className="text-xs text-gray-600">Nome*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.firstName ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.firstName ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="text" {...register("firstName")} />
 
                 {errors.firstName && <p className="text-xs text-red-600 mt-1"
@@ -44,7 +44,7 @@ export const RegisterForm = () => {
 
             <div>
                 <label className="text-xs text-gray-600">Sobrenome*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.lastName ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.lastName ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="text" {...register("lastName")} />
 
                 {errors.lastName && <p className="text-xs text-red-600 mt-1"
@@ -53,7 +53,7 @@ export const RegisterForm = () => {
 
             <div>
                 <label className="text-xs text-gray-600">CPF*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.cpf ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.cpf ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="text" {...register("cpf")} />
 
                 {errors.cpf && <p className="text-xs text-red-600 mt-1"
@@ -62,7 +62,7 @@ export const RegisterForm = () => {
 
             <div>
                 <label className="text-xs text-gray-600">Data de nascimento*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.birthDate ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.birthDate ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="date" {...register("birthDate")} />
 
                 {errors.birthDate && <p className="text-xs text-red-600 mt-1"
@@ -71,7 +71,7 @@ export const RegisterForm = () => {
 
             <div>
                 <label className="text-xs text-gray-600">Celular*</label>
-                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.cellPhone ? "border-red-500 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433eb]"}`}
+                <input className={`w-full rounded-xs border px-1 mt-1 focus:outline-none focus:ring-2 ${errors.cellPhone ? "border-error focus:ring-red-400" : "border-border focus:ring-accent"}`}
                     type="tel" {...register("cellPhone")} />
 
                 {errors.cellPhone && <p className="text-xs text-red-600 mt-1"
