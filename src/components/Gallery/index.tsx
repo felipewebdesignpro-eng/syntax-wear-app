@@ -114,7 +114,7 @@ const renderGalleryItem = (item: (typeof galleryItems)[number]) => {
 
 // O componente alterna entre a versão desktop e a versão mobile do grid.
 export const Gallery = () => {
-  const router = useRouter();
+  /* const router = useRouter(); */
   return (
     <section className="container mb-10 px-2.5 md:px-2.5">
       <div className="hidden md:block">
